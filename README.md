@@ -1,4 +1,15 @@
-# Parameterized Synchronous FIFO
+<div align="center">
+  <h1>📦 Parameterized Synchronous FIFO</h1>
+  <p><strong>Single-clock buffered data movement with occupancy and error-event tracking</strong></p>
+  <p>
+    <img src="https://img.shields.io/badge/HDL-SystemVerilog-F97316?style=for-the-badge" alt="SystemVerilog" />
+    <img src="https://img.shields.io/badge/Architecture-Single--Clock%20FIFO-8B5CF6?style=for-the-badge" alt="Single-clock FIFO" />
+    <img src="https://img.shields.io/badge/RTL-Implemented-22C55E?style=for-the-badge" alt="RTL implemented" />
+    <img src="https://img.shields.io/badge/Verification-Testbench%20Needed-EAB308?style=for-the-badge" alt="Testbench needed" />
+  </p>
+</div>
+
+---
 
 A single-clock, synthesizable FIFO implemented in SystemVerilog. The design provides registered read data, occupancy tracking, full/empty flags and one-cycle overflow/underflow event pulses.
 
@@ -104,4 +115,3 @@ iverilog -g2012 -s fifo -o fifo_compile fifo.sv
 - Use `DEPTH >= 2`; `DEPTH=1` produces a zero-width pointer declaration in common tools.
 - `DATA_WIDTH` and `DEPTH` must be positive integers.
 - This is a synchronous FIFO and must not be used for clock-domain crossing.
-
